@@ -8,7 +8,7 @@ function LightningTree_V2() {
 
     // Start with 4 parent sub trees.
     for (let i = 0; i < 3; ++i) {
-        trees.push(new LightningSubTree(getRand(30, 75), rootX, -5, 2));
+        trees.push(new LightningSubTree(getRand(30, 75), rootX, -5));
     }
 
     // Recursively draw all trees.
@@ -79,11 +79,11 @@ function LightningNode(parent, x, y) {
         var childOffsetY = 15;
 
         if (this.children[0] === null) {
-            this.children[0] = new LightningNode(this, this.xPos + childOffsetX, this.yPos + childOffsetY, 2);
+            this.children[0] = new LightningNode(this, this.xPos + childOffsetX, this.yPos + childOffsetY);
 
             // According to some probability, have this node sprout a new lightning node chain.
             if (expandLightning) {
-                this.children[1] = new LightningNode(this, this.xPos + childOffsetX, this.yPos + childOffsetY, 2);
+                this.children[1] = new LightningNode(this, this.xPos + childOffsetX, this.yPos + childOffsetY);
             }
 
         } else {
