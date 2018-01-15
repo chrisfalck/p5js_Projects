@@ -3,7 +3,7 @@ function LightningTree_V2() {
     // Track our lightning sub trees.
     var trees = []
 
-    // Start the tree in a position 200px away from wither screen edge.
+    // Start the tree in a position 200px away from either screen edge.
     var rootX = getRand(200, p5Width - 200);
 
     // Start with 4 parent sub trees.
